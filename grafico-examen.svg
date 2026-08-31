@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="850"
+   height="600"
+   version="1.1"
+   id="svg25"
+   sodipodi:docname="grafico-examen.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs25" />
+  <sodipodi:namedview
+     id="namedview25"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.75573722"
+     inkscape:cx="695.34752"
+     inkscape:cy="266.62707"
+     inkscape:window-width="1440"
+     inkscape:window-height="900"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg25" />
+  <rect
+     width="850"
+     height="600"
+     x="0"
+     y="0"
+     fill="#FFFFFF"
+     id="background" />
+  <g
+     transform="translate(70,30)"
+     id="visualization">
+    <g
+       id="g7">
+      <rect
+         x="705"
+         y="5.684341886080802e-14"
+         height="23.30935251798561"
+         width="5"
+         fill="black"
+         id="rect1">
+        <title
+           id="title1">1 horrible: 6</title>
+      </rect>
+      <rect
+         x="705"
+         y="28.309352517985666"
+         height="128.20143884892082"
+         width="5"
+         fill="black"
+         id="rect2">
+        <title
+           id="title2">2 mal: 33</title>
+      </rect>
+      <rect
+         x="705"
+         y="161.5107913669065"
+         height="221.4388489208633"
+         width="5"
+         fill="black"
+         id="rect3">
+        <title
+           id="title3">3 meh: 57</title>
+      </rect>
+      <rect
+         x="705"
+         y="387.9496402877698"
+         height="147.62589928057554"
+         width="5"
+         fill="black"
+         id="rect4">
+        <title
+           id="title4">4 bien: 38</title>
+      </rect>
+      <rect
+         x="705"
+         y="540.5755395683453"
+         height="19.424460431654666"
+         width="5"
+         fill="black"
+         id="rect5">
+        <title
+           id="title5">5 increíble: 5</title>
+      </rect>
+      <rect
+         x="0"
+         y="7.5"
+         height="404.0287769784173"
+         width="5"
+         fill="black"
+         id="rect6">
+        <title
+           id="title6">estudio: 104</title>
+      </rect>
+      <rect
+         x="0"
+         y="416.5287769784173"
+         height="135.97122302158272"
+         width="5"
+         fill="black"
+         id="rect7">
+        <title
+           id="title7">examen: 35</title>
+      </rect>
+    </g>
+    <g
+       fill="none"
+       stroke-opacity="1"
+       id="g17">
+      <g
+         style="mix-blend-mode: multiply;"
+         id="g8">
+        <path
+           d="M5,428.1834532374101C355,428.1834532374101,355,11.654676258992861,705,11.654676258992861"
+           stroke="#f6bb15"
+           stroke-width="23.30935251798561"
+           id="path7" />
+        <title
+           id="title8">examen → 1 horrible: 6</title>
+      </g>
+      <g
+         style="mix-blend-mode: multiply;"
+         id="g9">
+        <path
+           d="M5,186.20503597122303C355,186.20503597122303,355,246.97841726618708,705,246.97841726618708"
+           stroke="#fc538e"
+           stroke-width="170.93525179856115"
+           id="path8" />
+        <title
+           id="title9">estudio → 3 meh: 44</title>
+      </g>
+      <g
+         style="mix-blend-mode: multiply;"
+         id="g10">
+        <path
+           d="M5,457.3201438848921C355,457.3201438848921,355,139.0287769784173,705,139.0287769784173"
+           stroke="#f6bb15"
+           stroke-width="34.96402877697842"
+           id="path9" />
+        <title
+           id="title10">examen → 2 mal: 9</title>
+      </g>
+      <g
+         style="mix-blend-mode: multiply;"
+         id="g11">
+        <path
+           d="M5,54.11870503597122C355,54.11870503597122,355,74.92805755395688,705,74.92805755395688"
+           stroke="#fc538e"
+           stroke-width="93.23741007194243"
+           id="path10" />
+        <title
+           id="title11">estudio → 2 mal: 24</title>
+      </g>
+      <g
+         style="mix-blend-mode: multiply;"
+         id="g12">
+        <path
+           d="M5,335.773381294964C355,335.773381294964,355,452.0503597122302,705,452.0503597122302"
+           stroke="#fc538e"
+           stroke-width="128.20143884892084"
+           id="path11" />
+        <title
+           id="title12">estudio → 4 bien: 33</title>
+      </g>
+      <g
+         style="mix-blend-mode: multiply;"
+         id="g13">
+        <path
+           d="M5,500.05395683453236C355,500.05395683453236,355,357.6978417266187,705,357.6978417266187"
+           stroke="#f6bb15"
+           stroke-width="50.50359712230215"
+           id="path12" />
+        <title
+           id="title13">examen → 3 meh: 13</title>
+      </g>
+      <g
+         style="mix-blend-mode: multiply;"
+         id="g14">
+        <path
+           d="M5,548.6151079136691C355,548.6151079136691,355,556.1151079136691,705,556.1151079136691"
+           stroke="#f6bb15"
+           stroke-width="7.76978417266187"
+           id="path13" />
+        <title
+           id="title14">examen → 5 increíble: 2</title>
+      </g>
+      <g
+         style="mix-blend-mode: multiply;"
+         id="g15">
+        <path
+           d="M5,535.0179856115109C355,535.0179856115109,355,525.8633093525181,705,525.8633093525181"
+           stroke="#f6bb15"
+           stroke-width="19.424460431654676"
+           id="path14" />
+        <title
+           id="title15">examen → 4 bien: 5</title>
+      </g>
+      <g
+         style="mix-blend-mode: multiply;"
+         id="g16">
+        <path
+           d="M5,405.7014388489208C355,405.7014388489208,355,546.4028776978417,705,546.4028776978417"
+           stroke="#fc538e"
+           stroke-width="11.654676258992804"
+           id="path15" />
+        <title
+           id="title16">estudio → 5 increíble: 3</title>
+      </g>
+    </g>
+    <g
+       id="g23">
+      <text
+         x="677.46991"
+         y="16.02899"
+         text-anchor="end"
+         id="text17"
+         transform="scale(1.0347711,0.96639732)"
+         style="font-size:12.4173px;stroke-width:1.03477"><tspan
+           alignment-baseline="middle"
+           x="677.46991"
+           style="font-weight:bold;font-size:10.3477px;font-family:Arial, sans-serif;fill:#000000;stroke-width:1.03477"
+           id="tspan17">horrible</tspan></text>
+      <text
+         x="731.42139"
+         y="79.888229"
+         text-anchor="end"
+         id="text18"
+         transform="scale(0.95791164,1.0439376)"
+         style="font-size:17.5552px;stroke-width:1.46294"><tspan
+           alignment-baseline="middle"
+           x="731.42139"
+           style="font-weight:bold;font-size:14.6294px;font-family:Arial, sans-serif;fill:#000000;stroke-width:1.46294"
+           id="tspan18">mal</tspan></text>
+      <text
+         x="802.0105"
+         y="221.8951"
+         text-anchor="end"
+         id="text19"
+         transform="scale(0.87282153,1.1457096)"
+         style="font-size:19.6772px;stroke-width:1.63976"><tspan
+           alignment-baseline="middle"
+           x="802.0105"
+           style="font-weight:bold;font-size:16.3976px;font-family:Arial, sans-serif;fill:#000000;stroke-width:1.63976"
+           id="tspan19">meh</tspan></text>
+      <text
+         x="791.26837"
+         y="403.87219"
+         text-anchor="end"
+         id="text20"
+         transform="scale(0.88458674,1.1304714)"
+         style="font-size:18.0769px;stroke-width:1.50641"><tspan
+           alignment-baseline="middle"
+           x="791.26837"
+           style="font-weight:bold;font-size:15.0641px;font-family:Arial, sans-serif;fill:#000000;stroke-width:1.50641"
+           id="tspan20">bien</tspan></text>
+      <text
+         x="701.67786"
+         y="548.97064"
+         text-anchor="end"
+         id="text21"
+         style="display:inline"><tspan
+           alignment-baseline="middle"
+           x="701.67786"
+           style="font-weight:bold;font-size:10px;font-family:Arial, sans-serif;fill:#000000"
+           id="tspan21">increíble</tspan></text>
+      <text
+         x="28.415483"
+         y="163.50066"
+         text-anchor="start"
+         id="text22"
+         transform="scale(0.80446547,1.2430614)"
+         style="font-size:24.7155px;stroke-width:2.05963"><tspan
+           alignment-baseline="middle"
+           x="28.415483"
+           style="font-weight:bold;font-size:20.5963px;font-family:Arial, sans-serif;fill:#000000;stroke-width:2.05963"
+           id="tspan22">Estudio</tspan></text>
+      <text
+         x="12.283566"
+         y="394.04651"
+         text-anchor="start"
+         id="text23"
+         transform="matrix(0.77387128,-0.01505396,0.02489114,1.2917204,0,0)"
+         style="font-size:25.5269px;stroke-width:2.12724"><tspan
+           alignment-baseline="middle"
+           x="12.283566"
+           style="font-weight:bold;font-size:21.2724px;font-family:Arial, sans-serif;fill:#000000;stroke-width:2.12724"
+           id="tspan23">Examen</tspan></text>
+    </g>
+    <g
+       id="g25">
+      <text
+         x="707.5"
+         y="-4"
+         text-anchor="middle"
+         style="font-weight:bold;font-size:12px;font-family:Arial, sans-serif;fill:#7b7b7b"
+         id="text24">Estado de animo</text>
+      <text
+         x="2.5"
+         y="3.5"
+         text-anchor="middle"
+         style="font-weight:bold;font-size:12px;font-family:Arial, sans-serif;fill:#7b7b7b"
+         id="text25">Actividad académica</text>
+    </g>
+  </g>
+</svg>
