@@ -6,15 +6,120 @@
   <title>TP Visualización de la Información</title>
 
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
+      background-color: #ffbdd4;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
       text-align: center;
     }
+
+    header {
+      width: 92%;
+      max-width: 1100px;
+      margin: 35px auto 40px auto;
+    }
+
+    header h1 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      max-width: 850px;
+      margin: 8px auto;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    section,
+    .tableau-section {
+      width: 92%;
+      max-width: 1100px;
+      margin: 0 auto 35px auto;
+      background-color: white;
+      border-radius: 18px;
+      padding: 28px;
+
+      box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    section:hover,
+    .tableau-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.16);
+    }
+
+    iframe {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    .flourish-embed {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    object[type="image/svg+xml"] {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      min-height: 550px;
+      margin: 0 auto;
+    }
+
+    .tableau-section h2 {
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .tableauPlaceholder {
+      margin: 0 auto;
+    }
+
+    .tableauPlaceholder object {
+      max-width: 100% !important;
+    }
+
+    @media (max-width: 700px) {
+
+      header h1 {
+        font-size: 30px;
+      }
+
+      section,
+      .tableau-section {
+        width: 96%;
+        padding: 15px;
+      }
+
+      .tableau-section h2 {
+        font-size: 23px;
+      }
+
+      object[type="image/svg+xml"] {
+        min-height: 420px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
   <header>
+
     <h1>Trabajo Práctico de Visualización de la Información</h1>
 
     <p><strong>Alumna:</strong> Catalina Daminato</p>
@@ -24,12 +129,11 @@
       Daylio, una app de seguimiento diario que permite registrar el estado de
       ánimo y distintas actividades realizadas durante el día.
     </p>
+
   </header>
 
 
-
   <section>
-
 
     <iframe
       title="Distribución de mis estados de ánimo"
@@ -45,11 +149,9 @@
     </iframe>
 
   </section>
-  
 
 
   <section>
-
 
     <iframe
       title="¿Qué día de la semana tengo mejor ánimo?"
@@ -66,23 +168,183 @@
 
   </section>
 
-  
+
   <section>
 
-<div class="flourish-embed flourish-scatter" data-src="visualisation/30113597"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30113597/thumbnail" width="100%" alt="scatter visualization" /></noscript></div>
+    <div
+      class="flourish-embed flourish-scatter"
+      data-src="visualisation/30113597">
 
-</section>
-  
+      <script
+        src="https://public.flourish.studio/resources/embed.js">
+      </script>
+
+      <noscript>
+        <img
+          src="https://public.flourish.studio/visualisation/30113597/thumbnail"
+          width="100%"
+          alt="scatter visualization"
+        />
+      </noscript>
+
+    </div>
+
+  </section>
+
+
   <section>
 
-  <object
-    type="image/svg+xml"
-    data="./estudio.svg">
-  </object>
+    <object
+      type="image/svg+xml"
+      data="./estudio.svg">
+    </object>
 
-</section>
+  </section>
 
-  <div class='tableauPlaceholder' id='viz1790031096269' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;gr&#47;graficopie_17900286462270&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='graficopie_17900286462270&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;gr&#47;graficopie_17900286462270&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1790031096269');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='820px';vizElement.style.height='477px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='820px';vizElement.style.height='477px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-  
+
+  <div class="tableau-section">
+
+    <h2>
+      ¿Cambia mi estado de ánimo cuando estoy de vacaciones?
+    </h2>
+
+    <div
+      class='tableauPlaceholder'
+      id='viz1790031096269'
+      style='position: relative'>
+
+      <noscript>
+
+        <a href='#'>
+
+          <img
+            alt='Dashboard 1'
+            src='https://public.tableau.com/static/images/gr/graficopie_17900286462270/Dashboard1/1_rss.png'
+            style='border: none'
+          />
+
+        </a>
+
+      </noscript>
+
+      <object
+        class='tableauViz'
+        style='display:none;'>
+
+        <param
+          name='host_url'
+          value='https%3A%2F%2Fpublic.tableau.com%2F'
+        />
+
+        <param
+          name='embed_code_version'
+          value='3'
+        />
+
+        <param
+          name='site_root'
+          value=''
+        />
+
+        <param
+          name='name'
+          value='graficopie_17900286462270/Dashboard1'
+        />
+
+        <param
+          name='tabs'
+          value='no'
+        />
+
+        <param
+          name='toolbar'
+          value='yes'
+        />
+
+        <param
+          name='static_image'
+          value='https://public.tableau.com/static/images/gr/graficopie_17900286462270/Dashboard1/1.png'
+        />
+
+        <param
+          name='animate_transition'
+          value='yes'
+        />
+
+        <param
+          name='display_static_image'
+          value='yes'
+        />
+
+        <param
+          name='display_spinner'
+          value='yes'
+        />
+
+        <param
+          name='display_overlay'
+          value='yes'
+        />
+
+        <param
+          name='display_count'
+          value='yes'
+        />
+
+        <param
+          name='language'
+          value='es-ES'
+        />
+
+        <param
+          name='filter'
+          value='publish=yes'
+        />
+
+      </object>
+
+    </div>
+
+  </div>
+
+
+  <script type='text/javascript'>
+
+    var divElement =
+      document.getElementById('viz1790031096269');
+
+    var vizElement =
+      divElement.getElementsByTagName('object')[0];
+
+    if (divElement.offsetWidth > 800) {
+
+      vizElement.style.width = '820px';
+      vizElement.style.height = '477px';
+
+    } else if (divElement.offsetWidth > 500) {
+
+      vizElement.style.width = '820px';
+      vizElement.style.height = '477px';
+
+    } else {
+
+      vizElement.style.width = '100%';
+      vizElement.style.height = '727px';
+
+    }
+
+    var scriptElement =
+      document.createElement('script');
+
+    scriptElement.src =
+      'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+    vizElement.parentNode.insertBefore(
+      scriptElement,
+      vizElement
+    );
+
+  </script>
+
 </body>
 </html>
