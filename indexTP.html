@@ -22,28 +22,44 @@
     }
 
 
-    /* ENCABEZADO */
+    /* =========================
+       ENCABEZADO
+    ========================= */
 
     header {
       position: relative;
       overflow: hidden;
+
       background-color: white;
+
       width: 92%;
       max-width: 1100px;
+
       margin: 35px auto;
       padding: 42px;
+
       border-radius: 24px;
-      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+
+      box-shadow:
+        0 7px 20px rgba(0, 0, 0, 0.08);
+
       text-align: left;
     }
 
+
+    /* DETALLE ROSA SUPERIOR */
+
     header::before {
       content: "";
+
       position: absolute;
+
       top: -35px;
       right: -35px;
+
       width: 210px;
       height: 210px;
+
       border-radius: 50%;
 
       background:
@@ -57,13 +73,20 @@
       opacity: 0.9;
     }
 
+
+    /* DETALLE ROSA INFERIOR */
+
     header::after {
       content: "";
+
       position: absolute;
+
       bottom: -18px;
       left: -18px;
+
       width: 140px;
       height: 140px;
+
       border-radius: 50%;
 
       background:
@@ -77,43 +100,59 @@
       opacity: 0.95;
     }
 
+
     .header-content {
       position: relative;
       z-index: 2;
       max-width: 820px;
     }
 
+
     header h1 {
       font-size: 48px;
       line-height: 1.1;
+
       margin: 0 0 18px 0;
     }
+
 
     header .intro {
       font-size: 20px;
       line-height: 1.6;
+
       margin: 0;
+
       max-width: 820px;
     }
 
+
     header .alumna {
       margin-top: 18px;
+
       font-size: 15px;
+
       color: #555;
     }
 
 
-    /* TARJETAS */
+
+    /* =========================
+       TARJETAS GENERALES
+    ========================= */
 
     section,
     .tableau-section {
+
       background-color: white;
+
       border-radius: 18px;
 
       width: fit-content;
+
       max-width: calc(100% - 40px);
 
       margin: 0 auto 30px auto;
+
       padding: 22px;
 
       box-shadow:
@@ -124,8 +163,10 @@
         box-shadow 0.3s ease;
     }
 
+
     section:hover,
     .tableau-section:hover {
+
       transform: translateY(-4px);
 
       box-shadow:
@@ -133,129 +174,186 @@
     }
 
 
-    /* DATAWRAPPER */
+
+    /* =========================
+       DATAWRAPPER
+    ========================= */
 
     .datawrapper-card {
+
       width: min(1000px, calc(100% - 40px));
-      padding: 20px;
+
+      padding: 0;
+
+      overflow: hidden;
     }
 
+
     .datawrapper-card iframe {
+
       display: block;
+
       width: 100% !important;
+
       max-width: 100%;
-      margin: 0 auto;
+
+      margin: 0;
+
       border: none;
     }
 
-    /* alturas ajustadas para que no quede espacio blanco */
-
-    #datawrapper-chart-72Zdx {
-      height: 500px !important;
-    }
-
-    #datawrapper-chart-3o8YU {
-      height: 330px !important;
-    }
 
 
-    /* FLOURISH */
+    /* =========================
+       FLOURISH
+    ========================= */
 
     .flourish-card {
+
       width: min(1000px, calc(100% - 40px));
     }
+
 
     .flourish-embed {
+
       width: 100%;
+
       margin: 0 auto;
     }
 
 
-    /* SVG */
+
+    /* =========================
+       SVG
+    ========================= */
 
     .svg-card {
+
       width: min(1000px, calc(100% - 40px));
     }
 
+
     object[type="image/svg+xml"] {
+
       display: block;
+
       width: 100%;
+
       height: auto;
+
       min-height: 550px;
+
       margin: 0 auto;
     }
 
 
-    /* TABLEAU */
+
+    /* =========================
+       TABLEAU
+    ========================= */
 
     .tableau-section {
+
       width: min(1100px, calc(100% - 40px));
     }
 
+
     .tableau-section h2 {
+
       font-size: 27px;
+
       margin: 5px 0 20px 0;
     }
 
+
     .tableauPlaceholder {
+
       width: 100%;
+
       margin: 0 auto;
     }
 
 
-    /* RESPONSIVE */
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
 
     @media (max-width: 700px) {
 
+
       header {
+
         width: calc(100% - 20px);
+
         padding: 28px 22px;
+
         margin-top: 20px;
       }
 
+
       header h1 {
+
         font-size: 34px;
       }
 
+
       header .intro {
+
         font-size: 17px;
       }
 
+
       header::before {
+
         width: 150px;
         height: 150px;
+
         top: -20px;
         right: -20px;
       }
 
+
       header::after {
+
         width: 100px;
         height: 100px;
       }
 
+
       section,
       .tableau-section,
       .flourish-card,
-      .svg-card,
-      .datawrapper-card {
+      .svg-card {
+
         max-width: calc(100% - 20px);
+
         width: calc(100% - 20px);
+
         padding: 12px;
       }
 
-      #datawrapper-chart-72Zdx {
-        height: 460px !important;
+
+      /* Datawrapper sin espacio extra */
+
+      .datawrapper-card {
+
+        width: calc(100% - 20px);
+
+        max-width: calc(100% - 20px);
+
+        padding: 0;
       }
 
-      #datawrapper-chart-3o8YU {
-        height: 300px !important;
-      }
 
       .tableau-section h2 {
+
         font-size: 22px;
       }
 
+
       object[type="image/svg+xml"] {
+
         min-height: 400px;
       }
 
@@ -269,7 +367,9 @@
 <body>
 
 
-  <!-- ENCABEZADO -->
+  <!-- =========================
+       ENCABEZADO
+  ========================== -->
 
   <header>
 
@@ -280,13 +380,17 @@
       </h1>
 
       <p class="intro">
+
         Para este trabajo utilicé datos personales registrados en la aplicación
         Daylio, una app de seguimiento diario que permite registrar el estado de
         ánimo y distintas actividades realizadas durante el día.
+
       </p>
 
       <p class="alumna">
+
         <strong>Catalina Daminato</strong>
+
       </p>
 
     </div>
@@ -295,7 +399,10 @@
 
 
 
-  <!-- GRÁFICO 1 -->
+  <!-- =========================
+       GRÁFICO 1
+       DATAWRAPPER
+  ========================== -->
 
   <section class="datawrapper-card">
 
@@ -313,7 +420,10 @@
 
 
 
-  <!-- GRÁFICO 2 -->
+  <!-- =========================
+       GRÁFICO 2
+       DATAWRAPPER
+  ========================== -->
 
   <section class="datawrapper-card">
 
@@ -331,7 +441,10 @@
 
 
 
-  <!-- GRÁFICO 3 -->
+  <!-- =========================
+       GRÁFICO 3
+       FLOURISH
+  ========================== -->
 
   <section class="flourish-card">
 
@@ -358,7 +471,10 @@
 
 
 
-  <!-- GRÁFICO 4 -->
+  <!-- =========================
+       GRÁFICO 4
+       SVG
+  ========================== -->
 
   <section class="svg-card">
 
@@ -375,7 +491,10 @@
 
 
 
-  <!-- GRÁFICO TABLEAU -->
+  <!-- =========================
+       GRÁFICO 5
+       TABLEAU
+  ========================== -->
 
   <div class="tableau-section">
 
@@ -471,48 +590,128 @@
 
 
 
-  <!-- SCRIPT TABLEAU -->
+  <!-- =========================
+       ALTURA AUTOMÁTICA
+       DATAWRAPPER
+  ========================== -->
+
+  <script type="text/javascript">
+
+    window.addEventListener(
+      "message",
+      function(event) {
+
+        if (
+          event.data &&
+          event.data["datawrapper-height"]
+        ) {
+
+          var iframes =
+            document.querySelectorAll(
+              ".datawrapper-card iframe"
+            );
+
+
+          for (
+            var chartId in
+            event.data["datawrapper-height"]
+          ) {
+
+            for (
+              var i = 0;
+              i < iframes.length;
+              i++
+            ) {
+
+              if (
+                iframes[i].contentWindow ===
+                event.source
+              ) {
+
+                iframes[i].style.height =
+                  event.data[
+                    "datawrapper-height"
+                  ][chartId] + "px";
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+
+  <!-- =========================
+       SCRIPT TABLEAU
+  ========================== -->
 
   <script type="text/javascript">
 
     var divElement =
-      document.getElementById("viz1790032066452");
+      document.getElementById(
+        "viz1790032066452"
+      );
+
 
     var vizElement =
-      divElement.getElementsByTagName("object")[0];
+      divElement.getElementsByTagName(
+        "object"
+      )[0];
 
 
     if (divElement.offsetWidth > 800) {
 
-      vizElement.style.width = "100%";
+      vizElement.style.width =
+        "100%";
 
       vizElement.style.height =
-        (divElement.offsetWidth * 0.75) + "px";
+        (divElement.offsetWidth * 0.75)
+        + "px";
 
     }
 
-    else if (divElement.offsetWidth > 500) {
 
-      vizElement.style.width = "100%";
+    else if (
+      divElement.offsetWidth > 500
+    ) {
+
+      vizElement.style.width =
+        "100%";
 
       vizElement.style.height =
-        (divElement.offsetWidth * 0.75) + "px";
+        (divElement.offsetWidth * 0.75)
+        + "px";
 
     }
+
 
     else {
 
-      vizElement.style.width = "100%";
-      vizElement.style.height = "727px";
+      vizElement.style.width =
+        "100%";
+
+      vizElement.style.height =
+        "727px";
 
     }
 
 
     var scriptElement =
-      document.createElement("script");
+      document.createElement(
+        "script"
+      );
+
 
     scriptElement.src =
       "https://public.tableau.com/javascripts/api/viz_v1.js";
+
 
     vizElement.parentNode.insertBefore(
       scriptElement,
