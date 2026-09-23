@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TP Visualización de la Información</title>
+  <title>Mi día a día, contado a través de los datos</title>
 
   <style>
 
@@ -25,21 +25,70 @@
     /* ENCABEZADO */
 
     header {
+      position: relative;
+      overflow: hidden;
+      background-color: white;
       width: 92%;
-      max-width: 1000px;
-      margin: 32px auto 35px auto;
+      max-width: 1100px;
+      margin: 35px auto 35px auto;
+      padding: 42px 42px 36px 42px;
+      border-radius: 24px;
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+      text-align: left;
+    }
+
+    /* detalle decorativo rosa */
+    header::before {
+      content: "";
+      position: absolute;
+      top: -35px;
+      right: -35px;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(246, 57, 123, 0.18) 18%, transparent 19%) 0 0 / 26px 26px,
+        #ffd6e3;
+      opacity: 0.9;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(246, 57, 123, 0.12) 18%, transparent 19%) 0 0 / 22px 22px,
+        #ffe6ee;
+      opacity: 0.95;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
     }
 
     header h1 {
-      font-size: 36px;
-      margin-bottom: 14px;
+      font-size: 48px;
+      line-height: 1.1;
+      margin: 0 0 18px 0;
     }
 
-    header p {
-      max-width: 850px;
-      margin: 8px auto;
-      font-size: 16px;
-      line-height: 1.5;
+    header .intro {
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 820px;
+    }
+
+    header .alumna {
+      margin-top: 18px;
+      font-size: 15px;
+      color: #555;
     }
 
 
@@ -49,15 +98,11 @@
     .tableau-section {
       background-color: white;
       border-radius: 18px;
-
       width: fit-content;
       max-width: calc(100% - 40px);
-
       margin: 0 auto 30px auto;
       padding: 22px;
-
       box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
-
       transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -66,9 +111,7 @@
     section:hover,
     .tableau-section:hover {
       transform: translateY(-4px);
-
-      box-shadow:
-        0 12px 28px rgba(0, 0, 0, 0.13);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
     }
 
 
@@ -129,8 +172,30 @@
 
     @media (max-width: 700px) {
 
+      header {
+        width: calc(100% - 20px);
+        padding: 28px 22px 26px 22px;
+        margin-top: 20px;
+      }
+
       header h1 {
-        font-size: 28px;
+        font-size: 34px;
+      }
+
+      header .intro {
+        font-size: 17px;
+      }
+
+      header::before {
+        width: 150px;
+        height: 150px;
+        top: -20px;
+        right: -20px;
+      }
+
+      header::after {
+        width: 100px;
+        height: 100px;
       }
 
       section,
@@ -160,22 +225,24 @@
 <body>
 
 
+  <!-- ENCABEZADO -->
+
   <header>
+    <div class="header-content">
+      <h1>
+        Mi día a día, contado a través de los datos
+      </h1>
 
-    <h1>
-      Trabajo Práctico de Visualización de la Información
-    </h1>
+      <p class="intro">
+        Para este trabajo utilicé datos personales registrados en la aplicación
+        Daylio, una app de seguimiento diario que permite registrar el estado de
+        ánimo y distintas actividades realizadas durante el día.
+      </p>
 
-    <p>
-      <strong>Alumna:</strong> Catalina Daminato
-    </p>
-
-    <p>
-      Para este trabajo utilicé datos personales registrados en la aplicación
-      Daylio, una app de seguimiento diario que permite registrar el estado de
-      ánimo y distintas actividades realizadas durante el día.
-    </p>
-
+      <p class="alumna">
+        <strong>Catalina Daminato</strong>
+      </p>
+    </div>
   </header>
 
 
@@ -235,12 +302,10 @@
       </script>
 
       <noscript>
-
         <img
           src="https://public.flourish.studio/visualisation/30113597/thumbnail"
           width="100%"
           alt="scatter visualization">
-
       </noscript>
 
     </div>
@@ -252,12 +317,11 @@
   <!-- GRÁFICO 4 -->
 
   <section class="svg-card">
-     <h2>¿Cómo impacta mi actividad académica en mi estado de ánimo?</h2>
+    <h2>¿Cómo impacta mi actividad académica en mi estado de ánimo?</h2>
     <object
       type="image/svg+xml"
       data="./estudio(2.0).svg">
     </object>
-
   </section>
 
 
@@ -270,85 +334,79 @@
       ¿Cambia mi estado de ánimo cuando estoy de vacaciones?
     </h2>
 
-
     <div
-      class='tableauPlaceholder'
-      id='viz1790032066452'
-      style='position: relative'>
+      class="tableauPlaceholder"
+      id="viz1790032066452"
+      style="position: relative">
 
       <noscript>
-
-        <a href='#'>
-
+        <a href="#">
           <img
-            alt='Dashboard 1'
-            src='https://public.tableau.com/static/images/gr/graficopie_17900286462270/Dashboard1/1_rss.png'
-            style='border: none'>
-
+            alt="Dashboard 1"
+            src="https://public.tableau.com/static/images/gr/graficopie_17900286462270/Dashboard1/1_rss.png"
+            style="border: none">
         </a>
-
       </noscript>
 
-
       <object
-        class='tableauViz'
-        style='display:none;'>
+        class="tableauViz"
+        style="display:none;">
 
         <param
-          name='host_url'
-          value='https%3A%2F%2Fpublic.tableau.com%2F'>
+          name="host_url"
+          value="https%3A%2F%2Fpublic.tableau.com%2F">
 
         <param
-          name='embed_code_version'
-          value='3'>
+          name="embed_code_version"
+          value="3">
 
         <param
-          name='site_root'
-          value=''>
+          name="site_root"
+          value="">
 
         <param
-          name='name'
-          value='graficopie_17900286462270/Dashboard1'>
+          name="name"
+          value="graficopie_17900286462270/Dashboard1">
 
         <param
-          name='tabs'
-          value='no'>
+          name="tabs"
+          value="no">
 
         <param
-          name='toolbar'
-          value='yes'>
+          name="toolbar"
+          value="yes">
 
         <param
-          name='static_image'
-          value='https://public.tableau.com/static/images/gr/graficopie_17900286462270/Dashboard1/1.png'>
+          name="static_image"
+          value="https://public.tableau.com/static/images/gr/graficopie_17900286462270/Dashboard1/1.png">
 
         <param
-          name='animate_transition'
-          value='yes'>
+          name="animate_transition"
+          value="yes">
 
         <param
-          name='display_static_image'
-          value='yes'>
+          name="display_static_image"
+          value="yes">
 
         <param
-          name='display_spinner'
-          value='yes'>
+          name="display_spinner"
+          value="yes">
 
         <param
-          name='display_overlay'
-          value='yes'>
+          name="display_overlay"
+          value="yes">
 
         <param
-          name='display_count'
-          value='yes'>
+          name="display_count"
+          value="yes">
 
         <param
-          name='language'
-          value='es-ES'>
+          name="language"
+          value="es-ES">
 
         <param
-          name='filter'
-          value='publish=yes'>
+          name="filter"
+          value="publish=yes">
 
       </object>
 
@@ -358,44 +416,36 @@
 
 
 
-  <script type='text/javascript'>
+  <script type="text/javascript">
 
     var divElement =
-      document.getElementById('viz1790032066452');
+      document.getElementById("viz1790032066452");
 
     var vizElement =
-      divElement.getElementsByTagName('object')[0];
-
+      divElement.getElementsByTagName("object")[0];
 
     if (divElement.offsetWidth > 800) {
-
-      vizElement.style.width = '100%';
+      vizElement.style.width = "100%";
       vizElement.style.height =
-        (divElement.offsetWidth * 0.75) + 'px';
-
+        (divElement.offsetWidth * 0.75) + "px";
     }
 
     else if (divElement.offsetWidth > 500) {
-
-      vizElement.style.width = '100%';
+      vizElement.style.width = "100%";
       vizElement.style.height =
-        (divElement.offsetWidth * 0.75) + 'px';
-
+        (divElement.offsetWidth * 0.75) + "px";
     }
 
     else {
-
-      vizElement.style.width = '100%';
-      vizElement.style.height = '727px';
-
+      vizElement.style.width = "100%";
+      vizElement.style.height = "727px";
     }
 
-
     var scriptElement =
-      document.createElement('script');
+      document.createElement("script");
 
     scriptElement.src =
-      'https://public.tableau.com/javascripts/api/viz_v1.js';
+      "https://public.tableau.com/javascripts/api/viz_v1.js";
 
     vizElement.parentNode.insertBefore(
       scriptElement,
