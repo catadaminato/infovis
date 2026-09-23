@@ -37,7 +37,6 @@
       text-align: left;
     }
 
-    /* detalle decorativo rosa */
     header::before {
       content: "";
       position: absolute;
@@ -46,9 +45,15 @@
       width: 210px;
       height: 210px;
       border-radius: 50%;
+
       background:
-        radial-gradient(circle, rgba(246, 57, 123, 0.18) 18%, transparent 19%) 0 0 / 26px 26px,
+        radial-gradient(
+          circle,
+          rgba(246, 57, 123, 0.18) 18%,
+          transparent 19%
+        ) 0 0 / 26px 26px,
         #ffd6e3;
+
       opacity: 0.9;
     }
 
@@ -60,9 +65,15 @@
       width: 140px;
       height: 140px;
       border-radius: 50%;
+
       background:
-        radial-gradient(circle, rgba(246, 57, 123, 0.12) 18%, transparent 19%) 0 0 / 22px 22px,
+        radial-gradient(
+          circle,
+          rgba(246, 57, 123, 0.12) 18%,
+          transparent 19%
+        ) 0 0 / 22px 22px,
         #ffe6ee;
+
       opacity: 0.95;
     }
 
@@ -98,11 +109,16 @@
     .tableau-section {
       background-color: white;
       border-radius: 18px;
+
       width: fit-content;
       max-width: calc(100% - 40px);
+
       margin: 0 auto 30px auto;
       padding: 22px;
-      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+
+      box-shadow:
+        0 7px 20px rgba(0, 0, 0, 0.08);
+
       transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -111,16 +127,34 @@
     section:hover,
     .tableau-section:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
+
+      box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.13);
     }
 
 
     /* DATAWRAPPER */
 
-    iframe {
+    .datawrapper-card {
+      width: min(1000px, calc(100% - 40px));
+    }
+
+    .datawrapper-card iframe {
       display: block;
       margin: 0 auto;
+
+      width: 100% !important;
       max-width: 100%;
+
+      border: none;
+    }
+
+    #datawrapper-chart-72Zdx {
+      height: 620px !important;
+    }
+
+    #datawrapper-chart-3o8YU {
+      height: 520px !important;
     }
 
 
@@ -198,14 +232,26 @@
         height: 100px;
       }
 
+
       section,
       .tableau-section,
       .flourish-card,
-      .svg-card {
+      .svg-card,
+      .datawrapper-card {
         max-width: calc(100% - 20px);
         width: calc(100% - 20px);
         padding: 12px;
       }
+
+
+      #datawrapper-chart-72Zdx {
+        height: 500px !important;
+      }
+
+      #datawrapper-chart-3o8YU {
+        height: 420px !important;
+      }
+
 
       .tableau-section h2 {
         font-size: 22px;
@@ -228,7 +274,9 @@
   <!-- ENCABEZADO -->
 
   <header>
+
     <div class="header-content">
+
       <h1>
         Mi día a día, contado a través de los datos
       </h1>
@@ -242,14 +290,16 @@
       <p class="alumna">
         <strong>Catalina Daminato</strong>
       </p>
+
     </div>
+
   </header>
 
 
 
   <!-- GRÁFICO 1 -->
 
-  <section>
+  <section class="datawrapper-card">
 
     <iframe
       title="Distribución de mis estados de ánimo"
@@ -258,9 +308,6 @@
       src="https://datawrapper.dwcdn.net/72Zdx/1/"
       scrolling="no"
       frameborder="0"
-      style="border: none;"
-      width="600"
-      height="454"
       data-external="1">
     </iframe>
 
@@ -270,7 +317,7 @@
 
   <!-- GRÁFICO 2 -->
 
-  <section>
+  <section class="datawrapper-card">
 
     <iframe
       title="¿Qué día de la semana tengo mejor ánimo?"
@@ -279,9 +326,6 @@
       src="https://datawrapper.dwcdn.net/3o8YU/1/"
       scrolling="no"
       frameborder="0"
-      style="border: none;"
-      width="600"
-      height="260"
       data-external="1">
     </iframe>
 
@@ -302,10 +346,12 @@
       </script>
 
       <noscript>
+
         <img
           src="https://public.flourish.studio/visualisation/30113597/thumbnail"
           width="100%"
           alt="scatter visualization">
+
       </noscript>
 
     </div>
@@ -317,11 +363,16 @@
   <!-- GRÁFICO 4 -->
 
   <section class="svg-card">
-    <h2>¿Cómo impacta mi actividad académica en mi estado de ánimo?</h2>
+
+    <h2>
+      ¿Cómo impacta mi actividad académica en mi estado de ánimo?
+    </h2>
+
     <object
       type="image/svg+xml"
       data="./estudio(2.0).svg">
     </object>
+
   </section>
 
 
@@ -334,19 +385,25 @@
       ¿Cambia mi estado de ánimo cuando estoy de vacaciones?
     </h2>
 
+
     <div
       class="tableauPlaceholder"
       id="viz1790032066452"
       style="position: relative">
 
       <noscript>
+
         <a href="#">
+
           <img
             alt="Dashboard 1"
             src="https://public.tableau.com/static/images/gr/graficopie_17900286462270/Dashboard1/1_rss.png"
             style="border: none">
+
         </a>
+
       </noscript>
+
 
       <object
         class="tableauViz"
@@ -416,6 +473,8 @@
 
 
 
+  <!-- SCRIPT TABLEAU -->
+
   <script type="text/javascript">
 
     var divElement =
@@ -424,22 +483,32 @@
     var vizElement =
       divElement.getElementsByTagName("object")[0];
 
+
     if (divElement.offsetWidth > 800) {
+
       vizElement.style.width = "100%";
+
       vizElement.style.height =
         (divElement.offsetWidth * 0.75) + "px";
+
     }
 
     else if (divElement.offsetWidth > 500) {
+
       vizElement.style.width = "100%";
+
       vizElement.style.height =
         (divElement.offsetWidth * 0.75) + "px";
+
     }
 
     else {
+
       vizElement.style.width = "100%";
       vizElement.style.height = "727px";
+
     }
+
 
     var scriptElement =
       document.createElement("script");
