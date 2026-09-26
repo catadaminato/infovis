@@ -231,7 +231,26 @@
 
       width: min(1000px, calc(100% - 40px));
     }
-
+    /* TEXTO GRÁFICO ACADÉMICO */
+    
+    .academic-text {
+      text-align: left;
+      padding: 0 18px;
+      margin-bottom: 10px;
+    }
+    
+    .academic-text h2 {
+      margin: 5px 0 8px 0;
+      font-size: 27px;
+    }
+    
+    .academic-text p {
+      margin: 0 0 14px 0;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: normal;
+      color: #444;
+    }
 
     object[type="image/svg+xml"] {
 
@@ -495,20 +514,26 @@
        SVG
   ========================== -->
 
-  <section class="svg-card">
+<section class="svg-card academic-card">
+
+  <div class="academic-text">
 
     <h2>
       ¿Cómo impacta mi actividad académica en mi estado de ánimo?
     </h2>
 
-    <object
-      type="image/svg+xml"
-      data="./estudio(2.0).svg">
-    </object>
+    <p>
+      En los días de examen mi estado de ánimo es más variado, ya que depende de cómo siento que me fue, mientras que al estudiar suele mantenerse más estable.
+    </p>
 
-  </section>
+  </div>
 
+  <object
+    type="image/svg+xml"
+    data="./estudio(2.0).svg">
+  </object>
 
+</section>
 
   <!-- =========================
        GRÁFICO 5
@@ -516,11 +541,6 @@
   ========================== -->
 
   <div class="tableau-section">
-
-    <h2>
-      ¿Cambia mi estado de ánimo cuando estoy de vacaciones?
-    </h2>
-
 
     <div
       class="tableauPlaceholder"
