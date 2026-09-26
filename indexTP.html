@@ -276,14 +276,23 @@
 /* MAPA DE CALOR TABLEAU */
 
 .heatmap-card {
-  width: min(1000px, calc(100% - 40px));
+  width: min(1124px, calc(100% - 40px));
   padding: 12px;
   overflow: hidden;
 }
 
 .heatmap-card .tableauPlaceholder {
-  width: 100%;
-  margin: 0;
+  width: 1100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.heatmap-card .tableauViz {
+  display: block;
+  width: 1100px !important;
+  max-width: 100% !important;
+  height: 700px !important;
+  margin: 0 auto;
 }
 
     /* =========================
@@ -608,81 +617,35 @@
   <div
     class="tableauPlaceholder"
     id="viz1790446929262"
-    style="position: relative; width: 100%;">
+    style="position: relative;">
 
     <noscript>
-
       <a href="#">
-
         <img
           alt="¿A qué hora registro mi estado de ánimo?"
           src="https://public.tableau.com/static/images/re/registrosfecha/Dashboard1/1_rss.png"
           style="border: none; width: 100%;">
-
       </a>
-
     </noscript>
-
 
     <object
       class="tableauViz"
       style="display:none;">
 
-      <param
-        name="host_url"
-        value="https%3A%2F%2Fpublic.tableau.com%2F">
-
-      <param
-        name="embed_code_version"
-        value="3">
-
-      <param
-        name="site_root"
-        value="">
-
-      <param
-        name="name"
-        value="registrosfecha/Dashboard1">
-
-      <param
-        name="tabs"
-        value="no">
-
-      <param
-        name="toolbar"
-        value="yes">
-
-      <param
-        name="static_image"
-        value="https://public.tableau.com/static/images/re/registrosfecha/Dashboard1/1.png">
-
-      <param
-        name="animate_transition"
-        value="yes">
-
-      <param
-        name="display_static_image"
-        value="yes">
-
-      <param
-        name="display_spinner"
-        value="yes">
-
-      <param
-        name="display_overlay"
-        value="yes">
-
-      <param
-        name="display_count"
-        value="yes">
-
-      <param
-        name="language"
-        value="es-ES">
-
-      <param
-        name="filter"
-        value="publish=yes">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F">
+      <param name="embed_code_version" value="3">
+      <param name="site_root" value="">
+      <param name="name" value="registrosfecha/Dashboard1">
+      <param name="tabs" value="no">
+      <param name="toolbar" value="yes">
+      <param name="static_image" value="https://public.tableau.com/static/images/re/registrosfecha/Dashboard1/1.png">
+      <param name="animate_transition" value="yes">
+      <param name="display_static_image" value="yes">
+      <param name="display_spinner" value="yes">
+      <param name="display_overlay" value="yes">
+      <param name="display_count" value="yes">
+      <param name="language" value="es-ES">
+      <param name="filter" value="publish=yes">
 
     </object>
 
@@ -699,28 +662,18 @@
   var vizElement2 =
     divElement2.getElementsByTagName("object")[0];
 
+  if (window.innerWidth > 700) {
 
-  vizElement2.style.width = "100%";
+    vizElement2.style.width = "1100px";
+    vizElement2.style.maxWidth = "100%";
+    vizElement2.style.height = "700px";
 
+  } else {
 
-  if (divElement2.offsetWidth > 800) {
-
-    vizElement2.style.height = "590px";
-
-  }
-
-  else if (divElement2.offsetWidth > 500) {
-
-    vizElement2.style.height = "560px";
+    vizElement2.style.width = "100%";
+    vizElement2.style.height = "700px";
 
   }
-
-  else {
-
-    vizElement2.style.height = "690px";
-
-  }
-
 
   var scriptElement2 =
     document.createElement("script");
