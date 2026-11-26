@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un mundo con menos hijos</title>
+
+  <style>
+    :root {
+      --violeta: #652D91;
+      --violeta-oscuro: #371650;
+      --rosa: #F6397B;
+      --lavanda: #EFE6F8;
+      --fondo: #FAF7FD;
+      --texto: #25133C;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+    }
+
+    p {
+      line-height: 1.8;
+      color: #6F6380;
+    }
+
+    /* PORTADA */
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        radial-gradient(circle at 85% 15%, #E9D2F7, transparent 50%),
+        radial-gradient(circle at 10% 85%, #F8DDEB, transparent 45%),
+        #FBF9FE;
+    }
+
+    .etiqueta {
+      color: #9D197F;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    header h1 {
+      font-size: clamp(45px, 8vw, 90px);
+      max-width: 850px;
+      line-height: 1.1;
+      margin: 25px 0;
+    }
+
+    header h1 span {
+      color: #9D197F;
+    }
+
+    header p {
+      max-width: 600px;
+      font-size: 18px;
+    }
+
+    .scroll-indicator {
+      margin-top: 60px;
+      color: var(--violeta);
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    /* INTRODUCCIÓN */
+
+    .intro {
+      max-width: 750px;
+      margin: auto;
+      padding: 120px 25px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-size: clamp(30px, 5vw, 48px);
+    }
+
+    /* SCROLLYTELLING */
+
+    .story-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 70px 5%;
+    }
+
+    .section-heading {
+      max-width: 800px;
+      margin-bottom: 60px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      margin: 15px 0;
+    }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: 35% 65%;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .story-text {
+      padding-right: 20px;
+    }
+
+    .story-step {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px 10px;
+    }
+
+    .step-number {
+      color: #9D197F;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .story-step h3 {
+      font-size: 30px;
+      margin: 20px 0 10px;
+    }
+
+    .story-step p {
+      font-size: 17px;
+    }
+
+    /* GRÁFICOS */
+
+    .sticky-chart {
+      position: sticky;
+      top: 8vh;
+      height: 84vh;
+      background: white;
+      border: 1px solid #E9DEF0;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 15px 40px rgba(55, 22, 80, 0.08);
+      overflow: hidden;
+    }
+
+    .chart-label {
+      font-size: 12px;
+      color: #9D197F;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .flourish-embed {
+      width: 100%;
+      height: calc(100% - 30px);
+    }
+
+    .flourish-embed iframe {
+      width: 100% !important;
+      height: 100% !important;
+      border: none;
+    }
+
+    /* TRANSICIONES */
+
+    .transition {
+      min-height: 55vh;
+      background: linear-gradient(
+        120deg,
+        #371650,
+        #652D91
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 25px;
+    }
+
+    .transition h2 {
+      color: white;
+      max-width: 850px;
+      font-size: clamp(28px, 5vw, 50px);
+      line-height: 1.4;
+    }
+
+    .transition span {
+      color: #F6AFD2;
+    }
+
+    /* FINAL */
+
+    .conclusion {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      padding: 140px 25px;
+    }
+
+    .conclusion h2 {
+      font-size: clamp(35px, 5vw, 55px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #E9DEF0;
+      font-size: 13px;
+      color: #6F6380;
+    }
+
+    /* CELULARES */
+
+    @media (max-width: 850px) {
+
+      .story-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .story-text {
+        padding: 0;
+      }
+
+      .story-step {
+        min-height: auto;
+        padding: 35px 0;
+      }
+
+      .sticky-chart {
+        position: relative;
+        top: auto;
+        height: 550px;
+      }
+
+      .story-section {
+        padding: 60px 20px;
+      }
+
+      header {
+        min-height: 85vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA -->
+
+  <header>
+    <div class="etiqueta">
+      Trabajo final · Visualización de datos
+    </div>
+
+    <h1>
+      Un mundo con
+      <span>menos hijos</span>
+    </h1>
+
+    <p>
+      ¿Cómo cambió la fecundidad desde 1960?
+      Un recorrido visual por su evolución,
+      sus diferencias geográficas y los países
+      donde más disminuyó.
+    </p>
+
+    <div class="scroll-indicator">
+      DESLIZÁ PARA EXPLORAR ↓
+    </div>
+  </header>
+
+
+  <!-- INTRODUCCIÓN -->
+
+  <section class="intro">
+
+    <div class="etiqueta">
+      El punto de partida
+    </div>
+
+    <h2>
+      Una transformación que atraviesa generaciones
+    </h2>
+
+    <p>
+      La tasa de fecundidad representa el número
+      promedio de hijos por mujer. A partir de
+      datos del Banco Mundial, exploramos cómo
+      evolucionó este indicador entre 1960 y 2024.
+    </p>
+
+  </section>
+
+
+  <!-- GRÁFICO 1 -->
+
+  <section class="story-section">
+
+    <div class="section-heading">
+
+      <div class="etiqueta">
+        01 / La perspectiva histórica
+      </div>
+
+      <h2>
+        ¿Cómo cambió la fecundidad con el tiempo?
+      </h2>
+
+      <p>
+        Comenzamos con una mirada general para
+        comprender la evolución de la fecundidad
+        a lo largo de las últimas décadas.
+      </p>
+
+    </div>
+
+    <div class="story-layout">
+
+      <div class="story-text">
+
+        <div class="story-step">
+
+          <div class="step-number">
+            01 — OBSERVAR
+          </div>
+
+          <h3>
+            El cambio a lo largo del tiempo
+          </h3>
+
+          <p>
+            Analizamos la evolución histórica
+            de la fecundidad para identificar
+            cómo fue cambiando este indicador.
+          </p>
+
+        </div>
+
+        <div class="story-step">
+
+          <div class="step-number">
+            02 — INTERPRETAR
+          </div>
+
+          <h3>
+            Una transformación gradual
+          </h3>
+
+          <p>
+            Observar diferentes décadas permite
+            reconocer tendencias y distinguir
+            cambios sostenidos de variaciones
+            puntuales.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="sticky-chart">
+
+        <div class="chart-label">
+          Evolución de la fecundidad · 1960–2024
+        </div>
+
+        <div
+          class="flourish-embed flourish-chart"
+          data-src="visualisation/31039667">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRANSICIÓN 1 -->
+
+  <section class="transition">
+
+    <h2>
+      Pero una tendencia global no significa
+      que <span>todos los países vivan
+      el mismo cambio.</span>
+    </h2>
+
+  </section>
+
+
+  <!-- GRÁFICO 2 -->
+
+  <section class="story-section">
+
+    <div class="section-heading">
+
+      <div class="etiqueta">
+        02 / La dimensión geográfica
+      </div>
+
+      <h2>
+        Una misma tendencia, distintos territorios
+      </h2>
+
+      <p>
+        Exploramos cómo se distribuye la fecundidad
+        entre los países y cómo cambia a través
+        de los años.
+      </p>
+
+    </div>
+
+    <div class="story-layout">
+
+      <div class="story-text">
+
+        <div class="story-step">
+
+          <div class="step-number">
+            03 — EXPLORAR
+          </div>
+
+          <h3>
+            Un mapa que cambia con los años
+          </h3>
+
+          <p>
+            El mapa animado permite observar
+            la evolución de la fecundidad
+            en diferentes regiones del mundo.
+          </p>
+
+        </div>
+
+        <div class="story-step">
+
+          <div class="step-number">
+            04 — COMPARAR
+          </div>
+
+          <h3>
+            Las diferencias entre países
+          </h3>
+
+          <p>
+            Al recorrer los años podemos comparar
+            los niveles de fecundidad y reconocer
+            distintas trayectorias entre países.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="sticky-chart">
+
+        <div class="chart-label">
+          Mapa animado · Fecundidad por país
+        </div>
+
+        <div
+          class="flourish-embed flourish-map"
+          data-src="visualisation/31040625">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRANSICIÓN 2 -->
+
+  <section class="transition">
+
+    <h2>
+      Y si comparamos el comienzo y el final
+      del período,
+      <span>¿dónde fue mayor la caída?</span>
+    </h2>
+
+  </section>
+
+
+  <!-- GRÁFICO 3 -->
+
+  <section class="story-section">
+
+    <div class="section-heading">
+
+      <div class="etiqueta">
+        03 / La comparación
+      </div>
+
+      <h2>
+        Los diez países con las mayores caídas
+      </h2>
+
+      <p>
+        Comparamos la fecundidad de 1960 y 2024
+        para identificar los países donde
+        se registraron las mayores disminuciones.
+      </p>
+
+    </div>
+
+    <div class="story-layout">
+
+      <div class="story-text">
+
+        <div class="story-step">
+
+          <div class="step-number">
+            05 — SELECCIONAR
+          </div>
+
+          <h3>
+            ¿Qué países cambiaron más?
+          </h3>
+
+          <p>
+            Calculamos la diferencia entre ambos
+            años y seleccionamos los diez países
+            con mayores caídas absolutas.
+          </p>
+
+        </div>
+
+        <div class="story-step">
+
+          <div class="step-number">
+            06 — COMPARAR
+          </div>
+
+          <h3>
+            Dos momentos, una distancia
+          </h3>
+
+          <p>
+            Cada país tiene dos puntos que
+            representan su tasa de fecundidad
+            en 1960 y en 2024.
+
+            La distancia entre ellos permite
+            visualizar la magnitud de la caída.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="sticky-chart">
+
+        <div class="chart-label">
+          Comparación 1960 vs. 2024 · Top 10
+        </div>
+
+        <div
+          class="flourish-embed flourish-scatter"
+          data-src="visualisation/31040914">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONCLUSIÓN -->
+
+  <section class="conclusion">
+
+    <div class="etiqueta">
+      Reflexión final
+    </div>
+
+    <h2>
+      Una transformación, muchas historias
+    </h2>
+
+    <p>
+      Al combinar la evolución histórica,
+      la distribución geográfica y la comparación
+      entre países, podemos comprender la
+      disminución de la fecundidad desde
+      diferentes perspectivas.
+
+      Los datos muestran que se trata de
+      un fenómeno global, aunque con
+      diferencias importantes entre territorios.
+    </p>
+
+  </section>
+
+
+  <!-- PIE DE PÁGINA -->
+
+  <footer>
+    Trabajo final · Visualización de la Información
+    <p>
+      Fuente: Banco Mundial · World Development Indicators
+      | Visualizaciones: Flourish
+    </p>
+  </footer>
+
+
+  <!-- SCRIPT FLOURISH -->
+
+  <script src="https://public.flourish.studio/resources/embed.js"></script>
+
+</body>
+</html>
