@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Un mundo con menos hijos</title>
 
   <style>
@@ -11,10 +12,10 @@
       --violeta: #652D91;
       --violeta-oscuro: #371650;
       --rosa: #F6397B;
-      --violeta-rosa: #9D197F;
-      --lavanda: #EFE6F8;
-      --fondo: #FAF7FD;
+      --acento: #9D197F;
+      --fondo: #FBF9FD;
       --texto: #25133C;
+      --gris: #746A7E;
     }
 
     * {
@@ -27,304 +28,299 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
       background: var(--fondo);
       color: var(--texto);
-    }
-
-    h1, h2, h3 {
-      font-family: Georgia, serif;
-      line-height: 1.15;
-    }
-
-    p {
-      line-height: 1.75;
-      color: #6F6380;
+      font-family: Arial, sans-serif;
     }
 
     /* PORTADA */
 
-    header {
-      min-height: 100vh;
+    .portada {
+      min-height: 92vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 50px 25px;
+      padding: 60px 24px;
       background:
-        radial-gradient(circle at 85% 15%, #E9D2F7, transparent 50%),
-        radial-gradient(circle at 10% 85%, #F8DDEB, transparent 45%),
-        #FBF9FE;
+        radial-gradient(
+          circle at 85% 15%,
+          #F0E5F7,
+          transparent 55%
+        ),
+        var(--fondo);
     }
 
     .etiqueta {
-      color: var(--violeta-rosa);
-      font-size: 14px;
-      font-weight: bold;
+      color: var(--acento);
+      font-size: 12px;
+      font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
-    header h1 {
-      font-size: clamp(55px, 8vw, 105px);
+    h1, h2 {
+      font-family: Georgia, serif;
+      letter-spacing: -1px;
+    }
+
+    .portada h1 {
+      font-size: clamp(48px, 8vw, 100px);
+      line-height: 1.08;
       max-width: 1000px;
-      margin: 28px 0;
-      letter-spacing: -2px;
+      margin: 24px 0;
     }
 
-    header h1 span {
-      color: var(--violeta-rosa);
+    .portada h1 span {
+      color: var(--acento);
     }
 
-    header p {
-      max-width: 700px;
-      font-size: 20px;
+    .portada p {
+      max-width: 610px;
+      font-size: 19px;
+      line-height: 1.8;
+      color: var(--gris);
     }
 
-    .scroll-indicator {
+    .scroll {
       margin-top: 65px;
-      color: var(--violeta);
-      font-size: 13px;
+      color: var(--acento);
+      font-size: 12px;
       letter-spacing: 2px;
       font-weight: bold;
     }
 
     /* INTRODUCCIÓN */
 
-    .intro {
-      max-width: 850px;
+    .introduccion {
+      max-width: 780px;
       margin: auto;
-      padding: 115px 25px;
+      padding: 100px 25px;
       text-align: center;
     }
 
-    .intro h2 {
-      font-size: clamp(36px, 5vw, 58px);
+    .introduccion h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin: 20px 0;
     }
 
-    .intro p {
-      font-size: 19px;
+    .introduccion p {
+      color: var(--gris);
+      font-size: 18px;
+      line-height: 1.8;
     }
 
     /* SECCIONES */
 
-    .story-section {
+    .seccion {
       width: 100%;
-      max-width: 1750px;
-      margin: auto;
-      padding: 75px 3%;
+      padding: 100px 24px 120px;
     }
 
-    .section-heading {
-      max-width: 1050px;
-      margin-bottom: 55px;
+    .seccion:nth-of-type(even) {
+      background: #F7F2FA;
     }
 
-    .section-heading h2 {
-      font-size: clamp(38px, 4.5vw, 64px);
+    .encabezado {
+      max-width: 850px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .encabezado h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.2;
       margin: 18px 0;
     }
 
-    .section-heading p {
-      font-size: 19px;
-    }
-
-    /* SCROLLYTELLING */
-
-    .story-layout {
-      display: grid;
-      grid-template-columns: minmax(220px, 25%) minmax(0, 75%);
-      gap: 24px;
-      align-items: start;
-    }
-
-    .story-text {
-      padding-right: 12px;
-    }
-
-    .story-step {
-      min-height: 75vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 30px 5px;
-    }
-
-    .step-number {
-      color: var(--violeta-rosa);
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-    }
-
-    .story-step h3 {
-      font-size: clamp(25px, 2.5vw, 37px);
-      margin: 20px 0 12px;
-    }
-
-    .story-step p {
+    .encabezado p {
       font-size: 18px;
+      line-height: 1.75;
+      color: var(--gris);
+      max-width: 720px;
+      margin: auto;
     }
 
-    
-/* GRÁFICOS SIN RECUADROS */
+    /* CONTENEDOR DE GRÁFICOS */
 
-.sticky-chart {
-  position: sticky;
-  top: 5vh;
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  overflow: visible;
-  display: block;
-}
+    .grafico {
+      width: min(100%, 1300px);
+      margin: 0 auto;
+      padding: 18px;
+      background: #FFFFFF;
+      border: 1px solid #EAE3F0;
+      border-radius: 14px;
+      box-shadow: 0 5px 22px rgba(55, 22, 80, 0.035);
+    }
 
-.chart-label {
-  font-size: clamp(24px, 2.5vw, 36px);
-  color: #9D197F;
-  font-weight: bold;
-  margin-bottom: 20px;
-  line-height: 1.3;
-}
+    .grafico iframe {
+      display: block;
+      width: 100%;
+      border: 0;
+      background: #FFFFFF;
+    }
 
-.chart-container {
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  position: relative;
-}
+    /*
+      Cada gráfico tiene una altura independiente.
+      Así evitamos imponer la misma altura
+      a visualizaciones de formatos diferentes.
+    */
 
-.chart-container .flourish-embed {
-  width: 100%;
-  height: auto;
-  min-height: 0;
-}
+    .grafico-argentina iframe {
+      height: 650px;
+    }
 
-.chart-container iframe {
-  width: 100% !important;
-  height: 580px !important;
-  border: none !important;
-  display: block;
-}
+    .grafico-mapa iframe {
+      height: 720px;
+    }
 
-/* AJUSTES PARA CELULARES */
+    .grafico-top10 iframe {
+      height: 690px;
+    }
 
-@media (max-width: 850px) {
+    /* TRANSICIONES ENTRE CAPÍTULOS */
 
-  .sticky-chart {
-    position: relative;
-    top: auto;
-    height: auto;
-    min-height: 0;
-    padding: 0;
-  }
-
-  .chart-container iframe {
-    height: 450px !important;
-  }
-
-}
-
-
-    /* TRANSICIONES */
-
-    .transition {
-      min-height: 55vh;
-      background: linear-gradient(
-        120deg,
-        #371650,
-        #652D91
-      );
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .transicion {
       text-align: center;
-      padding: 65px 25px;
+      padding: 95px 24px;
+      background: var(--violeta-oscuro);
     }
 
-    .transition h2 {
+    .transicion p {
+      font-family: Georgia, serif;
+      font-size: clamp(27px, 4vw, 43px);
+      line-height: 1.45;
       color: white;
-      max-width: 1000px;
-      font-size: clamp(32px, 5vw, 58px);
-      line-height: 1.35;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .transition span {
-      color: #F6AFD2;
+    .transicion span {
+      color: #F5ABD5;
+    }
+
+    /* ANIMACIÓN AL HACER SCROLL */
+
+    .revelar {
+      opacity: 0;
+      transform: translateY(38px);
+      transition:
+        opacity 0.85s ease,
+        transform 0.85s ease;
+    }
+
+    .revelar.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* CONCLUSIÓN */
 
     .conclusion {
-      max-width: 900px;
+      max-width: 850px;
       margin: auto;
+      padding: 125px 25px;
       text-align: center;
-      padding: 145px 25px;
     }
 
     .conclusion h2 {
-      font-size: clamp(40px, 5vw, 65px);
+      font-size: clamp(35px, 5vw, 56px);
+      margin: 20px 0;
     }
 
     .conclusion p {
-      font-size: 19px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--gris);
     }
 
     footer {
+      padding: 35px 20px;
       text-align: center;
-      padding: 35px;
-      border-top: 1px solid #E9DEF0;
-      font-size: 14px;
-      color: #6F6380;
+      border-top: 1px solid #EAE3F0;
+      color: var(--gris);
+      font-size: 13px;
+      line-height: 1.8;
     }
 
-    /* ADAPTACIÓN A CELULARES */
+    /* PANTALLAS MEDIANAS */
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
 
-      .story-layout {
-        grid-template-columns: 1fr;
+      .seccion {
+        padding: 75px 14px 90px;
       }
 
-      .story-section {
-        padding: 65px 18px;
+      .grafico {
+        padding: 10px;
       }
 
-      .story-text {
-        padding: 0;
+      .grafico-argentina iframe {
+        height: 550px;
       }
 
-      .story-step {
-        min-height: auto;
-        padding: 30px 0;
+      .grafico-mapa iframe {
+        height: 570px;
       }
 
-      .sticky-chart {
-        position: relative;
-        top: auto;
-        height: 620px;
-        min-height: 0;
-        padding: 20px 12px;
+      .grafico-top10 iframe {
+        height: 580px;
       }
+    }
 
-      .chart-label {
-        font-size: 20px;
-      }
+    /* CELULARES */
 
-      header {
+    @media (max-width: 600px) {
+
+      .portada {
         min-height: 85vh;
       }
 
-      header p {
-        font-size: 17px;
+      .portada p {
+        font-size: 16px;
+      }
+
+      .encabezado p {
+        font-size: 16px;
+      }
+
+      .grafico {
+        padding: 5px;
+        border-radius: 9px;
+      }
+
+      .grafico-argentina iframe {
+        height: 480px;
+      }
+
+      .grafico-mapa iframe {
+        height: 470px;
+      }
+
+      .grafico-top10 iframe {
+        height: 540px;
+      }
+
+      .transicion {
+        padding: 75px 20px;
       }
     }
+
+    /* ACCESIBILIDAD */
+
+    @media (prefers-reduced-motion: reduce) {
+      .revelar {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
   </style>
 </head>
 
@@ -332,24 +328,24 @@
 
   <!-- PORTADA -->
 
-  <header>
+  <header class="portada">
 
     <div class="etiqueta">
-      Trabajo final · Visualización de datos
+      Trabajo final · Visualización de la Información
     </div>
 
     <h1>
-      Un mundo con <span>menos hijos</span>
+      Un mundo con
+      <span>menos hijos</span>
     </h1>
 
     <p>
-      ¿Cómo cambió la fecundidad desde 1960?
-      Un recorrido visual que comienza en Argentina,
-      continúa por el mundo y termina identificando
-      los países donde más disminuyó.
+      ¿Cómo cambió la fecundidad entre 1960 y 2024?
+      Un recorrido desde Argentina hacia el mundo
+      para explorar una transformación global.
     </p>
 
-    <div class="scroll-indicator">
+    <div class="scroll">
       DESLIZÁ PARA EXPLORAR ↓
     </div>
 
@@ -358,21 +354,22 @@
 
   <!-- INTRODUCCIÓN -->
 
-  <section class="intro">
+  <section class="introduccion revelar">
 
     <div class="etiqueta">
       El punto de partida
     </div>
 
     <h2>
-      Una transformación que atraviesa generaciones
+      Una transformación a lo largo del tiempo
     </h2>
 
     <p>
       La tasa de fecundidad representa el número
-      promedio de hijos por mujer. A partir de
-      datos del Banco Mundial, exploramos cómo
-      evolucionó este indicador entre 1960 y 2024.
+      promedio de hijos por mujer.
+      A partir de datos del Banco Mundial,
+      exploramos cómo evolucionó este indicador
+      en Argentina y en el resto del mundo.
     </p>
 
   </section>
@@ -380,12 +377,12 @@
 
   <!-- GRÁFICO 1: ARGENTINA -->
 
-  <section class="story-section">
+  <section class="seccion">
 
-    <div class="section-heading">
+    <div class="encabezado revelar">
 
       <div class="etiqueta">
-        01 / El caso de Argentina
+        01 / Argentina
       </div>
 
       <h2>
@@ -393,72 +390,21 @@
       </h2>
 
       <p>
-        Comenzamos nuestro recorrido analizando
-        cómo cambió la tasa de fecundidad
-        en Argentina a lo largo de las últimas décadas.
+        Comenzamos observando cómo cambió
+        la cantidad promedio de hijos por mujer
+        en Argentina a lo largo de las décadas.
       </p>
 
     </div>
 
-    <div class="story-layout">
+    <div class="grafico grafico-argentina revelar">
 
-      <div class="story-text">
-
-        <div class="story-step">
-
-          <div class="step-number">
-            01 — OBSERVAR
-          </div>
-
-          <h3>
-            La evolución de la fecundidad argentina
-          </h3>
-
-          <p>
-            Observamos cómo fue cambiando el número
-            promedio de hijos por mujer en Argentina
-            entre 1960 y 2024.
-          </p>
-
-        </div>
-
-        <div class="story-step">
-
-          <div class="step-number">
-            02 — INTERPRETAR
-          </div>
-
-          <h3>
-            Una tendencia a lo largo del tiempo
-          </h3>
-
-          <p>
-            El gráfico nos permite identificar
-            los períodos de mayor disminución
-            y comprender cómo evolucionó
-            la fecundidad en el país.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="sticky-chart">
-
-        <div class="chart-label">
-          Evolución de la fecundidad en Argentina · 1960–2024
-        </div>
-
-        <div class="chart-container">
-
-          <div
-            class="flourish-embed flourish-chart"
-            data-src="visualisation/31039667">
-          </div>
-
-        </div>
-
-      </div>
+      <iframe
+        title="Evolución de la fecundidad en Argentina"
+        src="https://flo.uri.sh/visualisation/31039667/embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
 
     </div>
 
@@ -467,97 +413,47 @@
 
   <!-- TRANSICIÓN 1 -->
 
-  <section class="transition">
+  <section class="transicion">
 
-    <h2>
+    <p class="revelar">
       Pero ¿esta disminución ocurrió solamente
       en Argentina o
       <span>también en el resto del mundo?</span>
-    </h2>
+    </p>
 
   </section>
 
 
   <!-- GRÁFICO 2: MAPA MUNDIAL -->
 
-  <section class="story-section">
+  <section class="seccion">
 
-    <div class="section-heading">
+    <div class="encabezado revelar">
 
       <div class="etiqueta">
-        02 / La dimensión geográfica
+        02 / El mundo
       </div>
 
       <h2>
-        Una misma tendencia, distintos territorios
+        ¿Cómo cambió la fecundidad a nivel mundial?
       </h2>
 
       <p>
-        Exploramos cómo se distribuye la fecundidad
-        entre los países y cómo cambia a través
-        de los años.
+        El mapa animado permite explorar
+        la evolución de la fecundidad
+        y comparar las diferencias entre países.
       </p>
 
     </div>
 
-    <div class="story-layout">
+    <div class="grafico grafico-mapa revelar">
 
-      <div class="story-text">
-
-        <div class="story-step">
-
-          <div class="step-number">
-            03 — EXPLORAR
-          </div>
-
-          <h3>
-            Un mapa que cambia con los años
-          </h3>
-
-          <p>
-            El mapa animado permite observar
-            la evolución de la fecundidad
-            en diferentes regiones del mundo.
-          </p>
-
-        </div>
-
-        <div class="story-step">
-
-          <div class="step-number">
-            04 — COMPARAR
-          </div>
-
-          <h3>
-            Las diferencias entre países
-          </h3>
-
-          <p>
-            Al recorrer los años podemos comparar
-            los niveles de fecundidad y reconocer
-            distintas trayectorias entre países.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="sticky-chart">
-
-        <div class="chart-label">
-          Mapa animado · Fecundidad por país
-        </div>
-
-        <div class="chart-container">
-
-          <div
-            class="flourish-embed flourish-map"
-            data-src="visualisation/31040625">
-          </div>
-
-        </div>
-
-      </div>
+      <iframe
+        title="Mapa mundial de fecundidad"
+        src="https://flo.uri.sh/visualisation/31040625/embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
 
     </div>
 
@@ -566,100 +462,47 @@
 
   <!-- TRANSICIÓN 2 -->
 
-  <section class="transition">
+  <section class="transicion">
 
-    <h2>
-      Y si comparamos el comienzo y el final
-      del período,
-      <span>¿dónde fue mayor la caída?</span>
-    </h2>
+    <p class="revelar">
+      La fecundidad disminuyó en muchos países,
+      pero <span>¿dónde se registraron
+      las mayores caídas?</span>
+    </p>
 
   </section>
 
 
   <!-- GRÁFICO 3: TOP 10 -->
 
-  <section class="story-section">
+  <section class="seccion">
 
-    <div class="section-heading">
+    <div class="encabezado revelar">
 
       <div class="etiqueta">
-        03 / La comparación
+        03 / Las mayores caídas
       </div>
 
       <h2>
-        Los diez países con las mayores caídas
+        ¿Qué países tuvieron las mayores disminuciones?
       </h2>
 
       <p>
-        Comparamos la fecundidad de 1960 y 2024
-        para identificar los países donde
-        se registraron las mayores disminuciones.
+        Comparamos la tasa de fecundidad
+        de 1960 y 2024 en los diez países
+        con las mayores reducciones.
       </p>
 
     </div>
 
-    <div class="story-layout">
+    <div class="grafico grafico-top10 revelar">
 
-      <div class="story-text">
-
-        <div class="story-step">
-
-          <div class="step-number">
-            05 — SELECCIONAR
-          </div>
-
-          <h3>
-            ¿Qué países cambiaron más?
-          </h3>
-
-          <p>
-            Calculamos la diferencia entre ambos
-            años y seleccionamos los diez países
-            con mayores caídas absolutas.
-          </p>
-
-        </div>
-
-        <div class="story-step">
-
-          <div class="step-number">
-            06 — COMPARAR
-          </div>
-
-          <h3>
-            Dos momentos, una distancia
-          </h3>
-
-          <p>
-            Cada país tiene dos puntos que
-            representan su tasa de fecundidad
-            en 1960 y en 2024.
-
-            La distancia entre ellos permite
-            visualizar la magnitud de la caída.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="sticky-chart">
-
-        <div class="chart-label">
-          Comparación 1960 vs. 2024 · Top 10
-        </div>
-
-        <div class="chart-container">
-
-          <div
-            class="flourish-embed flourish-scatter"
-            data-src="visualisation/31040914">
-          </div>
-
-        </div>
-
-      </div>
+      <iframe
+        title="Top 10 de países con mayor caída de fecundidad"
+        src="https://flo.uri.sh/visualisation/31040914/embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
 
     </div>
 
@@ -668,46 +511,80 @@
 
   <!-- CONCLUSIÓN -->
 
-  <section class="conclusion">
+  <section class="conclusion revelar">
 
     <div class="etiqueta">
       Reflexión final
     </div>
 
     <h2>
-      Una transformación, muchas historias
+      Una transformación global
     </h2>
 
     <p>
-      Al combinar la evolución de Argentina,
-      la distribución mundial y la comparación
-      entre países, podemos comprender
-      la disminución de la fecundidad
-      desde diferentes perspectivas.
-
-      Los datos permiten observar un fenómeno
-      de alcance global, aunque con diferencias
-      importantes entre territorios.
+      La evolución de Argentina, el mapa mundial
+      y la comparación entre países nos permiten
+      observar cómo disminuyó la fecundidad
+      a lo largo del tiempo, aunque con
+      diferencias importantes entre territorios.
     </p>
 
   </section>
 
 
-  <!-- PIE DE PÁGINA -->
+  <!-- FOOTER -->
 
   <footer>
     Trabajo final · Visualización de la Información
 
-    <p>
+    <div>
       Fuente: Banco Mundial · World Development Indicators
-      | Visualizaciones: Flourish
-    </p>
+    </div>
+
+    <div>
+      Visualizaciones realizadas en Flourish
+    </div>
   </footer>
 
 
-  <!-- SCRIPT FLOURISH -->
+  <!-- ANIMACIONES AL HACER SCROLL -->
 
-  <script src="https://public.flourish.studio/resources/embed.js"></script>
+  <script>
+    const elementos = document.querySelectorAll(".revelar");
+
+    if ("IntersectionObserver" in window) {
+
+      const observador = new IntersectionObserver(
+        (entradas) => {
+
+          entradas.forEach((entrada) => {
+
+            if (entrada.isIntersecting) {
+              entrada.target.classList.add("visible");
+              observador.unobserve(entrada.target);
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.08,
+          rootMargin: "0px 0px 40px 0px"
+        }
+      );
+
+      elementos.forEach((elemento) => {
+        observador.observe(elemento);
+      });
+
+    } else {
+
+      elementos.forEach((elemento) => {
+        elemento.classList.add("visible");
+      });
+
+    }
+  </script>
 
 </body>
 </html>
