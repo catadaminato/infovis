@@ -11,6 +11,7 @@
       --violeta: #652D91;
       --violeta-oscuro: #371650;
       --rosa: #F6397B;
+      --violeta-rosa: #9D197F;
       --lavanda: #EFE6F8;
       --fondo: #FAF7FD;
       --texto: #25133C;
@@ -33,10 +34,11 @@
 
     h1, h2, h3 {
       font-family: Georgia, serif;
+      line-height: 1.15;
     }
 
     p {
-      line-height: 1.8;
+      line-height: 1.75;
       color: #6F6380;
     }
 
@@ -49,7 +51,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 25px;
       background:
         radial-gradient(circle at 85% 15%, #E9D2F7, transparent 50%),
         radial-gradient(circle at 10% 85%, #F8DDEB, transparent 45%),
@@ -57,33 +59,33 @@
     }
 
     .etiqueta {
-      color: #9D197F;
-      font-size: 12px;
+      color: var(--violeta-rosa);
+      font-size: 14px;
       font-weight: bold;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
     header h1 {
-      font-size: clamp(45px, 8vw, 90px);
-      max-width: 850px;
-      line-height: 1.1;
-      margin: 25px 0;
+      font-size: clamp(55px, 8vw, 105px);
+      max-width: 1000px;
+      margin: 28px 0;
+      letter-spacing: -2px;
     }
 
     header h1 span {
-      color: #9D197F;
+      color: var(--violeta-rosa);
     }
 
     header p {
-      max-width: 600px;
-      font-size: 18px;
+      max-width: 700px;
+      font-size: 20px;
     }
 
     .scroll-indicator {
-      margin-top: 60px;
+      margin-top: 65px;
       color: var(--violeta);
-      font-size: 12px;
+      font-size: 13px;
       letter-spacing: 2px;
       font-weight: bold;
     }
@@ -91,43 +93,54 @@
     /* INTRODUCCIÓN */
 
     .intro {
-      max-width: 750px;
+      max-width: 850px;
       margin: auto;
-      padding: 120px 25px;
+      padding: 115px 25px;
       text-align: center;
     }
 
     .intro h2 {
-      font-size: clamp(30px, 5vw, 48px);
+      font-size: clamp(36px, 5vw, 58px);
+    }
+
+    .intro p {
+      font-size: 19px;
+    }
+
+    /* SECCIONES */
+
+    .story-section {
+      width: 100%;
+      max-width: 1750px;
+      margin: auto;
+      padding: 75px 3%;
+    }
+
+    .section-heading {
+      max-width: 1050px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(38px, 4.5vw, 64px);
+      margin: 18px 0;
+    }
+
+    .section-heading p {
+      font-size: 19px;
     }
 
     /* SCROLLYTELLING */
 
-    .story-section {
-      max-width: 1400px;
-      margin: auto;
-      padding: 70px 5%;
-    }
-
-    .section-heading {
-      max-width: 800px;
-      margin-bottom: 60px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(32px, 4vw, 52px);
-      margin: 15px 0;
-    }
-
     .story-layout {
       display: grid;
-      grid-template-columns: 35% 65%;
-      gap: 30px;
+      grid-template-columns: minmax(220px, 25%) minmax(0, 75%);
+      gap: 24px;
       align-items: start;
     }
 
     .story-text {
-      padding-right: 20px;
+      padding-right: 12px;
     }
 
     .story-step {
@@ -135,57 +148,67 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 30px 10px;
+      padding: 30px 5px;
     }
 
     .step-number {
-      color: #9D197F;
-      font-size: 12px;
+      color: var(--violeta-rosa);
+      font-size: 13px;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
     }
 
     .story-step h3 {
-      font-size: 30px;
-      margin: 20px 0 10px;
+      font-size: clamp(25px, 2.5vw, 37px);
+      margin: 20px 0 12px;
     }
 
     .story-step p {
-      font-size: 17px;
+      font-size: 18px;
     }
 
-    /* GRÁFICOS */
+    /* RECUADROS DE GRÁFICOS */
 
     .sticky-chart {
       position: sticky;
-      top: 8vh;
-      height: 84vh;
+      top: 4vh;
+      height: 92vh;
+      min-height: 620px;
       background: white;
       border: 1px solid #E9DEF0;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 15px 40px rgba(55, 22, 80, 0.08);
+      border-radius: 22px;
+      padding: 25px 20px 15px;
+      box-shadow: 0 12px 35px rgba(55, 22, 80, 0.06);
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .chart-label {
-      font-size: 12px;
-      color: #9D197F;
+      font-size: clamp(18px, 2vw, 28px);
+      color: var(--violeta-rosa);
       font-weight: bold;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      letter-spacing: 0.4px;
       margin-bottom: 15px;
+      line-height: 1.3;
     }
 
-    .flourish-embed {
+    .chart-container {
+      flex: 1;
+      min-height: 0;
       width: 100%;
-      height: calc(100% - 30px);
+      position: relative;
     }
 
-    .flourish-embed iframe {
+    .chart-container .flourish-embed {
+      width: 100%;
+      height: 100%;
+    }
+
+    .chart-container iframe {
       width: 100% !important;
       height: 100% !important;
-      border: none;
+      border: none !important;
     }
 
     /* TRANSICIONES */
@@ -201,47 +224,55 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 60px 25px;
+      padding: 65px 25px;
     }
 
     .transition h2 {
       color: white;
-      max-width: 850px;
-      font-size: clamp(28px, 5vw, 50px);
-      line-height: 1.4;
+      max-width: 1000px;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1.35;
     }
 
     .transition span {
       color: #F6AFD2;
     }
 
-    /* FINAL */
+    /* CONCLUSIÓN */
 
     .conclusion {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
       text-align: center;
-      padding: 140px 25px;
+      padding: 145px 25px;
     }
 
     .conclusion h2 {
-      font-size: clamp(35px, 5vw, 55px);
+      font-size: clamp(40px, 5vw, 65px);
+    }
+
+    .conclusion p {
+      font-size: 19px;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px;
       border-top: 1px solid #E9DEF0;
-      font-size: 13px;
+      font-size: 14px;
       color: #6F6380;
     }
 
-    /* CELULARES */
+    /* ADAPTACIÓN A CELULARES */
 
     @media (max-width: 850px) {
 
       .story-layout {
         grid-template-columns: 1fr;
+      }
+
+      .story-section {
+        padding: 65px 18px;
       }
 
       .story-text {
@@ -250,21 +281,27 @@
 
       .story-step {
         min-height: auto;
-        padding: 35px 0;
+        padding: 30px 0;
       }
 
       .sticky-chart {
         position: relative;
         top: auto;
-        height: 550px;
+        height: 620px;
+        min-height: 0;
+        padding: 20px 12px;
       }
 
-      .story-section {
-        padding: 60px 20px;
+      .chart-label {
+        font-size: 20px;
       }
 
       header {
         min-height: 85vh;
+      }
+
+      header p {
+        font-size: 17px;
       }
     }
   </style>
@@ -275,25 +312,26 @@
   <!-- PORTADA -->
 
   <header>
+
     <div class="etiqueta">
       Trabajo final · Visualización de datos
     </div>
 
     <h1>
-      Un mundo con
-      <span>menos hijos</span>
+      Un mundo con <span>menos hijos</span>
     </h1>
 
     <p>
       ¿Cómo cambió la fecundidad desde 1960?
-      Un recorrido visual por su evolución,
-      sus diferencias geográficas y los países
-      donde más disminuyó.
+      Un recorrido visual que comienza en Argentina,
+      continúa por el mundo y termina identificando
+      los países donde más disminuyó.
     </p>
 
     <div class="scroll-indicator">
       DESLIZÁ PARA EXPLORAR ↓
     </div>
+
   </header>
 
 
@@ -319,24 +357,24 @@
   </section>
 
 
-  <!-- GRÁFICO 1 -->
+  <!-- GRÁFICO 1: ARGENTINA -->
 
   <section class="story-section">
 
     <div class="section-heading">
 
       <div class="etiqueta">
-        01 / La perspectiva histórica
+        01 / El caso de Argentina
       </div>
 
       <h2>
-        ¿Cómo cambió la fecundidad con el tiempo?
+        ¿Cómo evolucionó la fecundidad en Argentina?
       </h2>
 
       <p>
-        Comenzamos con una mirada general para
-        comprender la evolución de la fecundidad
-        a lo largo de las últimas décadas.
+        Comenzamos nuestro recorrido analizando
+        cómo cambió la tasa de fecundidad
+        en Argentina a lo largo de las últimas décadas.
       </p>
 
     </div>
@@ -352,13 +390,13 @@
           </div>
 
           <h3>
-            El cambio a lo largo del tiempo
+            La evolución de la fecundidad argentina
           </h3>
 
           <p>
-            Analizamos la evolución histórica
-            de la fecundidad para identificar
-            cómo fue cambiando este indicador.
+            Observamos cómo fue cambiando el número
+            promedio de hijos por mujer en Argentina
+            entre 1960 y 2024.
           </p>
 
         </div>
@@ -370,14 +408,14 @@
           </div>
 
           <h3>
-            Una transformación gradual
+            Una tendencia a lo largo del tiempo
           </h3>
 
           <p>
-            Observar diferentes décadas permite
-            reconocer tendencias y distinguir
-            cambios sostenidos de variaciones
-            puntuales.
+            El gráfico nos permite identificar
+            los períodos de mayor disminución
+            y comprender cómo evolucionó
+            la fecundidad en el país.
           </p>
 
         </div>
@@ -387,12 +425,16 @@
       <div class="sticky-chart">
 
         <div class="chart-label">
-          Evolución de la fecundidad · 1960–2024
+          Evolución de la fecundidad en Argentina · 1960–2024
         </div>
 
-        <div
-          class="flourish-embed flourish-chart"
-          data-src="visualisation/31039667">
+        <div class="chart-container">
+
+          <div
+            class="flourish-embed flourish-chart"
+            data-src="visualisation/31039667">
+          </div>
+
         </div>
 
       </div>
@@ -407,15 +449,15 @@
   <section class="transition">
 
     <h2>
-      Pero una tendencia global no significa
-      que <span>todos los países vivan
-      el mismo cambio.</span>
+      Pero ¿esta disminución ocurrió solamente
+      en Argentina o
+      <span>también en el resto del mundo?</span>
     </h2>
 
   </section>
 
 
-  <!-- GRÁFICO 2 -->
+  <!-- GRÁFICO 2: MAPA MUNDIAL -->
 
   <section class="story-section">
 
@@ -485,9 +527,13 @@
           Mapa animado · Fecundidad por país
         </div>
 
-        <div
-          class="flourish-embed flourish-map"
-          data-src="visualisation/31040625">
+        <div class="chart-container">
+
+          <div
+            class="flourish-embed flourish-map"
+            data-src="visualisation/31040625">
+          </div>
+
         </div>
 
       </div>
@@ -510,7 +556,7 @@
   </section>
 
 
-  <!-- GRÁFICO 3 -->
+  <!-- GRÁFICO 3: TOP 10 -->
 
   <section class="story-section">
 
@@ -583,9 +629,13 @@
           Comparación 1960 vs. 2024 · Top 10
         </div>
 
-        <div
-          class="flourish-embed flourish-scatter"
-          data-src="visualisation/31040914">
+        <div class="chart-container">
+
+          <div
+            class="flourish-embed flourish-scatter"
+            data-src="visualisation/31040914">
+          </div>
+
         </div>
 
       </div>
@@ -608,15 +658,15 @@
     </h2>
 
     <p>
-      Al combinar la evolución histórica,
-      la distribución geográfica y la comparación
-      entre países, podemos comprender la
-      disminución de la fecundidad desde
-      diferentes perspectivas.
+      Al combinar la evolución de Argentina,
+      la distribución mundial y la comparación
+      entre países, podemos comprender
+      la disminución de la fecundidad
+      desde diferentes perspectivas.
 
-      Los datos muestran que se trata de
-      un fenómeno global, aunque con
-      diferencias importantes entre territorios.
+      Los datos permiten observar un fenómeno
+      de alcance global, aunque con diferencias
+      importantes entre territorios.
     </p>
 
   </section>
@@ -626,6 +676,7 @@
 
   <footer>
     Trabajo final · Visualización de la Información
+
     <p>
       Fuente: Banco Mundial · World Development Indicators
       | Visualizaciones: Flourish
